@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E7F6FF; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 10px;
+            background-color: transparent; 
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 56px;
+            font-weight: bold;
+            color: #e29da6;
+            position: absolute;
+            left: 20px; 
+        }
+
+        .button-nav {
+            display: flex;
+            gap: 20px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            align-items: center;
+        }
+
+        .button-nav a {
+            text-decoration: none;
+            background-color: transparent;
+            border: 2px solid #CBADA5;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            color: #998378;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .button-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #CBADA5;
+            border-color: #e29da6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-container {
+            width: 80%;
+            max-width: 1200px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 100px; 
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #CBADA5; 
+        }
+
+        .faq-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .faq {
+            position: relative;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown {
+            position: relative;
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #F9F9F9;
+            padding: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 100%;
+            border-radius: 8px;
+            opacity: 0; 
+            transform: translateY(-10px); 
+            transition: opacity 0.3s ease, transform 0.3s ease; 
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        .dropdown span {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            color: #665A51; 
+        }
+
+        .faq-form {
+            background-color: #F1E3E3; 
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .faq-form h3 {
+            color: #CBADA5; 
+            margin-bottom: 20px;
+        }
+
+        .faq-form input, .faq-form button {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #CBADA5; 
+            border-radius: 20px;
+            color: #665A51;
+        }
+
+        .faq-form button {
+            background-color: #F1A7A7; 
+            color: white;
+            cursor: pointer;
+        }
+
+        .faq-form button:hover {
+            background-color: #E98D8D; 
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Lexisbloom</div>
+        <div class="button-nav">
+            <a href="file:///E:/HOME%20MAIN.html">Home</a>
+            <a href="file:///E:/ABOUT%20US.html">About</a>
+            <a href="file:///E:/BEST%20SELLER.html">Best Seller</a>
+            <a href="file:///E:/FLOWERS.html">Flowers</a>
+            <a href="file:///E:/BOUQUET.html">Bouquet</a>
+            <a href="file:///E:/FAQ'S.html">FAQ's</a>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-columns">
+            <!-- Column 1 -->
+            <div class="faq">
+                <div class="dropdown">
+                    <span>What types of flowers do you offer?</span>
+                    <div class="dropdown-content">
+                        <p>We offer a wide selection of flowers including roses, lilies, tulips, daisies, orchids, and many seasonal varieties.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="dropdown">
+                    <span>Do you offer flower delivery?</span>
+                    <div class="dropdown-content">
+                        <p>Yes, we offer same-day delivery in the local area and next-day delivery for other regions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="dropdown">
+                    <span>How can I place an order for flowers?</span>
+                    <div class="dropdown-content">
+                        <p>You can place an order through our website, by phone, or by visiting our store directly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="faq">
+                <div class="dropdown">
+                    <span>Can I customize a bouquet or arrangement?</span>
+                    <div class="dropdown-content">
+                        <p>Absolutely! You can choose the flowers, colors, and styles that best suit your needs, and our florists will create the perfect arrangement for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="dropdown">
+                    <span>Do you offer gift items along with flowers?</span>
+                    <div class="dropdown-content">
+                        <p>Yes, we offer a selection of gifts including chocolates, teddy bears, and vases that can be added to any floral arrangement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="dropdown">
+                    <span>Are the flowers fresh?</span>
+                    <div class="dropdown-content">
+                        <p>We receive fresh deliveries every day to ensure that our flowers are of the highest quality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="faq">
+                <div class="dropdown">
+                    <span>Do you offer flowers for events?</span>
+                    <div class="dropdown-content">
+                        <p>Yes, we provide flowers for weddings, corporate events, parties, and other special occasions. Contact us to discuss your event details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="dropdown">
+                    <span>How should I care for my flowers?</span>
+                    <div class="dropdown-content">
+                        <p>Each flower type may have different care instructions, but generally, keep your flowers in water, change the water regularly, and avoid direct sunlight.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="dropdown">
+                    <span>Do you offer any discounts or promotions?</span>
+                    <div class="dropdown-content">
+                        <p>We offer seasonal promotions and discounts on larger orders. Be sure to sign up for our newsletter to stay updated on current offers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Form -->
+        <div class="faq-form">
+            <h3>Got More Questions About LexisBloom?</h3>
+            <p>Our team at LexisBloom is here to help! If you have any specific inquiries or need assistance with flowers, arrangements, or anything else, feel free to ask!</p>
+            <input type="text" placeholder="Enter your question here">
+            <button>Send</button>
+        </div>
+    </div>
+
+</body>
+</html>

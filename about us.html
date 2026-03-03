@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E7F6FF;
+            color: #998378;
+        }
+ .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+       
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center; 
+            position: relative;
+            z-index: 10;
+            padding: 10px;
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 56px;
+            font-weight: bold;
+            color: #e29da6;
+            position: absolute;
+            left: 20px;
+        }
+
+        .button-nav {
+            display: flex;
+            justify-content: center; 
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        .button-nav a {
+            text-decoration: none;
+            background-color: transparent;
+            border: 2px solid #CBADA5;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            color: #998378;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .button-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #CBADA5;
+            border-color: #e29da6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+       
+        .about-title {
+            font-size: 40px;
+            font-weight: bold;
+            color: #CBADA5;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        /* About Section */
+        .about-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 10px;
+            background: #F9F9F9;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .about-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        /* Text Content */
+        .about-text-content {
+            width: 50%;
+        }
+
+        .about-text-content h4 {
+            color: #CBADA5;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-text-content h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .about-text-content p {
+            font-size: 16px;
+            color: #665A51;
+            line-height: 1.6;
+        }
+
+        /* Image Content */
+        .about-image-content {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image-content img {
+            width: 100%;
+            border-radius: 12px;
+            background: #CBADA5;
+            padding: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            text-align: center;
+            background: #E7F6FF;
+            padding: 20px;
+            flex: 1;
+            margin: 0 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-box h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #CBADA5;
+        }
+
+        .stat-box p {
+            font-size: 14px;
+            color: #665A51;
+        }
+
+        /* Services Section */
+        .services-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 50px 20px;
+        }
+
+        .services-top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .services-text-content {
+            width: 50%;
+        }
+
+        .services-text-content h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #998378;
+            margin-bottom: 15px;
+        }
+
+        .services-text-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .service-box-single {
+            width: 45%;
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #CBADA5;
+        }
+
+        .service-box-single h3 {
+            color: #CBADA5;
+            margin-bottom: 10px;
+        }
+
+        /* Bottom Container */
+        .services-bottom-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-box {
+            width: 30%;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-box h3 {
+            color: #998378;
+            margin-bottom: 10px;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .mission-left-content {
+            width: 45%;
+        }
+
+        .mission-left-content h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #998378;
+        }
+
+        .mission-left-content h4,
+        .mission-left-content h5 {
+            font-size: 16px;
+            color: #555;
+            font-weight: normal;
+        }
+
+        .mission-right-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.02);
+        }
+
+        .feature-text {
+            font-size: 14px;
+            color: #777;
+        }
+
+ 
+.reviews-section {
+    padding: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 24px;
+    color: #998378;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    width: 100%; 
+    background-color: #CBADA5; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.client-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #998378; /* Muted olive green */
+}
+
+
+.guest-status {
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+
+.review-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    max-width: 90%;
+}
+
+
+.star-rating {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9900; 
+    max-width: 90%;
+}
+
+
+@media (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .review-card {
+        margin-bottom: 20px; 
+    }
+}
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 20px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 1000px;
+        }
+
+        .contact-section h1 {
+            font-size: 32px;
+            color: #998378;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .shop-address-container {
+            text-align: left;
+            width: 45%;
+            background-color: #CBADA5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .shop-address-container h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .shop-address-container p {
+            font-size: 16px;
+            color: white;
+        }
+
+        .google-map-container {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #998378;
+        }
+
+        .contact-info-container p {
+            background-color: #CBADA5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .shop-address-container, .google-map-container {
+                width: 100%;
+            }
+
+            .contact-info-container {
+                flex-direction: column;
+                gap: 10px;
+                font-size: 16px;
+            }
+
+            .contact-info-container p {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="logo">Lexisbloom</div> 
+    <header class="navbar">
+      <div class="button-nav">
+        <a href="file:///E:/HOME%20MAIN.html">Home</a>
+        <a href="file:///E:/ABOUT%20US.html">About</a>
+        <a href="file:///E:/BEST%20SELLER.html">Best Seller</a>
+        <a href="file:///E:/FLOWERS.html">Flowers</a>
+        <a href="file:///E:/BOUQUET.html">Bouquet</a>
+        <a href="file:///E:/FAQ'S.html">FAQ's</a>
+      </div>
+    </header>
+  </div>
+
+<section class="about-section">
+    <h1 class="about-title">ABOUT US</h1>
+    <div class="about-content-wrapper">
+        <div class="about-text-content">
+            <h4 class="subheading">How Our Journey Started? <h4>
+            <h1>It all started with her.</h1>
+            <p>At first, I never really paid much attention to flowers. But when I found out how much Alexis loved them—how her eyes lit up at every bouquet, how she admired every petal, every color, every scent—I knew I had to do something special.
+            <br><br>
+            So, I started making handmade bouquets just for her. At first, it was just a small gesture, a way to show how much I appreciated her. But the more I arranged flowers, the more I realized… I was falling in love—not just with her, but with the art of floristry itself.
+            <br><br>
+            Seeing how happy it made her, I wanted to share that same joy with others. And that’s how LexisBloom was born—a florist shop inspired by love, dedicated to creating moments of happiness, one bloom at a time.</p>
+        </div>
+        <div class="about-image-content">
+            <img src="mybaby.jpg" alt="Alexis Ganda">
+        </div>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <h2>4.5</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+            <h2>23</h2>
+            <p>Floral Projects</p>
+        </div>
+        <div class="stat-box">
+            <h2>460+</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat-box">
+            <h2>19k</h2>
+            <p>Flowers Delivered</p>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="services-top-container">
+        <div class="services-text-content">
+            <h1>Why Choose LexisBloom?</h1>
+            <p>At LexisBloom, every bouquet has a story. Every flower is chosen with love, just like how this journey began.</p>
+        </div>
+        <div class="service-box-single">
+            <h3>Handcrafted with Passion</h3>
+            <p>Every arrangement is made with love and care.</p>
+        </div>
+    </div>
+
+    <div class="services-bottom-container">
+        <div class="service-box">
+            <h3>Fresh & Beautiful Blooms</h3>
+            <p>We select only the best flowers for every design.</p>
+        </div>
+        <div class="service-box">
+            <h3>Personalized Touch</h3>
+            <p>Whether for love, sympathy, or celebration, we make flowers meaningful.</p>
+        </div>
+        <div class="service-box">
+            <h3>Affordable Luxury</h3>
+            <p>Elegant arrangements at prices that make sense.</p>
+        </div>
+    </div>
+</section>
+
+<section class="mission-section">
+    <div class="mission-left-content">
+        <h1>Our Mission</h1>
+        <h4>To bring happiness and beauty through handcrafted floral arrangements, making every moment special—just like the way this journey began.</h4>
+        <h5>At LexisBloom, we aim to:</h5>
+    </div>
+    
+    <div class="mission-right-content">
+        <div class="feature-box">
+            <div class="feature-text">
+                <p>🌸 Create stunning floral designs that bring joy to people’s lives.</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-text">
+                <p>🎁 Offer a personalized experience so every bouquet tells a story.</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="feature-text">
+                <p>💖 Share our love for flowers through artistry and passion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="reviews-section">
+    <h2>What Our Amazing Clients Say</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="avatar">
+                
+                <img src="maymay.jpg" alt="Profile Image of Richelle May">
+            </div>
+            <h3 class="client-name">Richelle May</h3>
+            <p class="guest-status">Guest</p>
+            <p class="review-text">I ordered a bouquet for my girlfriend, and it was even more beautiful than I imagined!</p>
+            <p class="star-rating">⭐ 4.5/5</p>
+        </div>
+
+        <div class="review-card">
+            <div class="avatar">
+              
+                <img src="je.jpg" alt="Profile Image of Jelena Ysabelle">
+            </div>
+            <h3 class="client-name">Jelena Ysabelle</h3>
+            <p class="guest-status">Guest</p>
+            <p class="review-text">Their flowers have a personal touch—you can feel the love behind every arrangement.</p>
+            <p class="star-rating">⭐ 4.8/5</p>
+        </div>
+
+        <div class="review-card">
+            <div class="avatar">
+               
+                <img src="rie.jpg" alt="Profile Image of Mariella">
+            </div>
+            <h3 class="client-name">Mariella Jhane</h3>
+            <p class="guest-status">Guest</p>
+            <p class="review-text">The only florist I trust for special occasions! They always make things feel extra special. </p>
+            <p class="star-rating">⭐ 4.7/5</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-section">
+    <h1>Contact & Location</h1>
+    <div class="contact-container">
+        <div class="shop-address-container">
+            <h2>Our Location</h2>
+            <p>604, Quezon City, Philippines</p>
+            <p>Open Hours: Mon - Fri, 9:00 AM - 6:00 PM</p>
+        </div>
+
+        <div class="google-map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.210053349519!2d120.9829073!3d14.5995125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a3f03b3c5be7f9%3A0x3952f0812ee2f5f2!2sManila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1614766827583!5m2!1sen!2sus"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="contact-info-container">
+        <p>📧 Email: lexisbloom@email.com</p>
+        <p>📞 Phone: +906 0440 31909</p>
+    </div>
+</section>
+
+</body>
+</html>

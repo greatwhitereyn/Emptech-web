@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #E7F6FF;
+      color: #4a4a4a;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      position: relative;
+      z-index: 10;
+      padding: 10px;
+    }
+
+    .logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 56px;
+      font-weight: bold;
+      color: #e29da6;
+      position: absolute;
+      left: 20px;
+    }
+
+    .button-nav {
+      display: flex;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      align-items: center;
+    }
+
+    .button-nav a {
+      text-decoration: none;
+      background-color: transparent;
+      border: 2px solid #CBADA5;
+      padding: 8px 15px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 20px;
+      color: #998378;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .button-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #CBADA5;
+      border-color: #e29da6;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .home-section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .main-showcase {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f9eceb;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .showcase-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .showcase-image img {
+      width: 400px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .showcase-text {
+      flex: 1;
+      padding-left: 20px;
+    }
+
+    .showcase-text h1 {
+      font-size: 64px;
+      color: #e29da6;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .showcase-text h1 span {
+      display: block;
+      font-size: 96px;
+      font-weight: bold;
+    }
+
+    .showcase-text .tagline {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: #4a4a4a;
+    }
+
+    .showcase-text .description {
+      font-size: 14px;
+      color: #6d6d6d;
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+
+    .sizes span {
+      display: inline-block;
+      font-size: 14px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      padding: 5px 10px;
+      background-color: #f8dcdc;
+      border-radius: 10px;
+    }
+
+    .price-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+    }
+
+    .price-section .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e29da6;
+    }
+
+    .buy-btn {
+      padding: 10px 20px;
+      background: linear-gradient(to right, #e29da6, #f6b2ac);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #e29da6;
+    }
+
+    .featured-products {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .featured-products a {
+      text-decoration: none;
+    }
+
+    .product {
+      text-align: center;
+      background: white;
+      border-radius: 1px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      width: 22%;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-info h3 {
+      font-size: 18px;
+      color: #e29da6;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+
+    .home-section::after {
+      content: '';
+      display: block;
+      width: 10;
+      height: 2px;
+      background-color: #e29da6; 
+      margin-top: 40px; 
+    }
+
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      list-style: none;
+      padding: 10px 20px;
+      background-color: #f8f8f8;
+      border-radius: 5px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .breadcrumb li a {
+      text-decoration: none;
+      color: #e29da6;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .breadcrumb li a:hover {
+      color: #f6b2ac;
+    }
+
+    .breadcrumb li::after {
+      content: ">";
+      margin: 0 5px;
+      color: gray;
+    }
+
+    .breadcrumb li:last-child::after {
+      content: "";
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+      gap: 20px; 
+      padding: 20px;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      gap: 10px;
+      text-align: center; 
+      background: white;
+      border-radius: 1px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      width: calc(25% - 20px); 
+      box-sizing: border-box; 
+    }
+
+    .product img {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 150px;  
+      height: 150px; 
+      object-fit: cover;  
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #e29da6;
+    }
+
+    .product p {
+      color: #555;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    @media (max-width: 1200px) {
+      .product {
+        width: calc(33.33% - 20px); 
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product {
+        width: calc(50% - 20px); 
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product {
+        width: 100%; 
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">Lexisbloom</div> 
+    <header class="navbar">
+      <div class="button-nav">
+        <a href="file:///E:/HOME%20MAIN.html">Home</a>
+        <a href="file:///E:/ABOUT%20US.html">About</a>
+        <a href="file:///E:/BEST%20SELLER.html">Best Seller</a>
+        <a href="file:///E:/FLOWERS.html">Flowers</a>
+        <a href="file:///E:/BOUQUET.html">Bouquet</a>
+        <a href="file:///E:/FAQ'S.html">FAQ's</a>
+      </div>
+    </header>
+  </div>
+  <div class="home-section">
+    <div class="main-showcase">
+      <div class="showcase-image">
+        <img src="blue1.jpg" alt="Tulip Bouquet">
+      </div>
+      <div class="showcase-text">
+        <h1>4th <span>May</span></h1>
+        <p class="tagline">BLOOM SOMEONE'S DAY</p>
+        <p class="description">
+         Fresh flowers can make any moment special. Whether it’s a gift or just because, they’re sure to bring a smile!
+        </p>
+        <div class="sizes">
+          <span>S</span>
+          <span>M</span>
+          <span>L</span>
+        </div>
+        <div class="price-section">
+          <span class="price">₱50</span>
+          <button class="buy-btn">Buy with ❤️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-products">
+      <a href="file:///E:/BEST%20SELLER.html" class="product">
+        <div class="product-info">
+          <h3>From ₱50.00</h3>
+          <p>Delivery Included</p>
+        </div>
+      </a>
+      <a href="file:///E:/BEST%20SELLER.html" class="product">
+        <div class="product-info">
+          <h3>Happy Flower's Day</h3>
+          <p>25% Offer</p>
+        </div>
+      </a>
+      <a href="file:///E:/BEST%20SELLER.html" class="product">
+        <div class="product-info">
+          <h3>From ₱50.00</h3>
+          <p>New Collection</p>
+        </div>
+      </a>
+      <a href="file:///E:/BEST%20SELLER.html" class="product">
+        <div class="product-info">
+          <h3>From ₱50.00</h3>
+          <p>Exclusive Offer</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <ul class="breadcrumb">
+    <li><a href="file:///E:/ROSES%20MAIN.html">Roses</a></li>
+    <li><a href="file:///E:/ORCHID%20MAIN.html">Orchid</a></li>
+    <li><a href="file:///E:/FOREIGN%20FLOWERS.html">Foreign Flowers</a></li>
+	<li><a href="file:///E:/BOUQUET.html">Bouquet</a></li>
+  </ul>
+
+  <div class="product-container">
+    <div class="product">
+      <img src="r1.jpg" alt="Rose">
+      <h3>Coral Rose</h3>
+      <p>₱50</p>
+    </div>
+    <div class="product">
+      <img src="o1.jpg" alt="catasetum">
+      <h3>Catasetum</h3>
+      <p>₱50</p>
+    </div>
+    <div class="product">
+      <img src="f1.jpg" alt="tulip">
+      <h3>Tulip</h3>
+      <p>₱50</p>
+    </div>
+    <div class="product">
+      <img src="nosegay.jpg" alt="r1">
+      <h3>Nosegay Bouquet</h3>
+      <p>₱50</p>
+    </div>
+  </div>
+
+</body>
+</html>
